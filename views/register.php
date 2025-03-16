@@ -6,4 +6,4 @@
 <button type="submit">Register</button>
 </form>
 
-<a href="/reset-password">Already have an account?</a>
+<a href="/">Already have an account?</a>
