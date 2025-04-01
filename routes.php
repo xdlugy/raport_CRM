@@ -1,16 +1,14 @@
 <?php
-$request = $_SERVER['REQUEST_URI'];
+require_once("models/route.php");
 
-switch($request) {
-    case "/":
-        if(!isset($_SESSION['user'])) {
-            require_once("./views/login.php");
-        }
-        else {
-            require_once("./views/home.php");
-        }
-    break;
-    case "/register":
-        require_once("./views/register.php");
-}
+$router = new Route;
+
+$router->get('/', 'controllers/index.php');
+$router->get('/register', 'controllers/register.php');
+$router->get('/login', 'controllers/login.php');
+
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+$method = isset($_POST['_method']) ? $_POST['_method'] : $_SERVER['REQUEST_METHOD'];
+
+$router->route($uri, $method);
 ?>
