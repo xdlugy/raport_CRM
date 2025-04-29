@@ -1,6 +1,7 @@
 <?php
+
 if(!isset($_SESSION['user'])) {
-    $router->get('/login', 'controllers/login.php');
+    header('location: /login');
 }
 else {
     require_once("./views/home.php");
