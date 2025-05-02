@@ -1,7 +1,7 @@
 ### TESTS
 
 TODO:
-- [ ] finish register controller
+- [ ] finish register controller - **CSRF**
 - [ ] login controller
 - [ ] Install with Nginx + PHP-FPM -> pack into Docker
 
@@ -11,3 +11,4 @@ Stack:
 - Claude 3.7 + Perplexity
 - XDebug
 - PostgreSQL
+- DBeaver
