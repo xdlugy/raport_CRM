@@ -18,11 +18,11 @@ class Database {
         }
     }
 
-    public function execute($query, $args = []) {
+    public function execute($query, $args) {
         $db = $this->connect();
         $stmt = $db->prepare($query);
         foreach($args as $key => $value) {
-            $stmt->bindParam($key + 1, $value);
+            $stmt->bindValue($key, $value);
         }
         $stmt->execute();
         return $stmt;

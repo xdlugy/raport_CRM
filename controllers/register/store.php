@@ -1,15 +1,8 @@
 <?php
-session_start();
+
+require_once('../db.php');
 
 //TODO: check vulnerabilities
-
-if(!empty($_POST['csrf_token'])) {
-    if(!hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
-        die('Invalid CSRF token');
-    }
-} else {
-    die('CSRF token not set');
-}
 
 $username = $_POST['username'];
 $email = $_POST['email'];

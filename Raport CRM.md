@@ -1,8 +1,8 @@
 ### TESTS
 
 TODO:
-- [ ] finish register controller - **CSRF**
-- [ ] login controller
+- [x] finish register controller
+- [ ] login controller - **CSRF**
 - [ ] Install with Nginx + PHP-FPM -> pack into Docker
 
 Stack:
